@@ -1,0 +1,67 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: BMW ini
+scopeName: source.ini
+fileTypes: [ini]
+uuid: b8ef7405-34e3-40ca-bb55-17b18f8247bd
+#Green	entity.name.function.ini
+#Blue	storage.type.ini
+#Red	keyword.control.ini
+#Yello	string.other.ini
+#Grey	comment.line.ini
+#Invert	invalid.illegal.ini
+
+patterns:
+- include: '#long'
+
+
+#注释
+- name: comment.line.ini
+  match: ;.+$
+#中继包
+- name: comment.line.ini
+  match: (?<=,[48],[0-9A-F]{2} )30 00 00( 00 00 00 00)?
+#包长为1
+- name: entity.name.function.ini
+  match: (?<=,3,[0-9A-F]{2} )01
+#包长为2
+- name: entity.name.function.ini
+  match: (?<=,4,[0-9A-F]{2} )02
+#包长为3
+- name: entity.name.function.ini
+  match: (?<=,5,[0-9A-F]{2} )03
+#包长为4
+- name: entity.name.function.ini
+  match: (?<=,6,[0-9A-F]{2} )04
+#包长为5
+- name: entity.name.function.ini
+  match: (?<=,7,[0-9A-F]{2} )05
+#包长为6
+- name: entity.name.function.ini
+  match: (?<=,8,[0-9A-F]{2} )06
+#长包
+- name: storage.type.ini
+  match: (?<=,[3-8],[0-9A-F]{2} )[12][0-9A-F]
+#收包者身份
+- name: storage.type.ini
+  match: (?<=^TX,6[0-9A-F]{2},[3-8],)[0-9A-F]{2}
+- name: string.other.ini
+  match: (?<=^RX,6F1,[3-8],)[0-9A-F]{2}
+#包长
+- name: entity.name.function.ini
+  match: (?<=^[RT]X,6[0-9A-F]{2},)[3-8]
+#RX,6F1
+- name: storage.type.ini
+  match: ^RX,6F1
+#回包者身份
+- name: string.other.ini
+  match: ^TX,6[0-9A-F]{2}
+
+
+repository:
+  long:
+    match: (?<=^TX,7[0-9A-F]{2},8,)(2[0-9A-F])
+    captures:
+      '1': {name: comment.line.ini}
+
+...

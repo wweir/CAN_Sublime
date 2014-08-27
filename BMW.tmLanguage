@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>ini</string>
+	</array>
+	<key>name</key>
+	<string>BMW ini</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>#long</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>;.+$</string>
+			<key>name</key>
+			<string>comment.line.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=,[48],[0-9A-F]{2} )30 00 00( 00 00 00 00)?</string>
+			<key>name</key>
+			<string>comment.line.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=,3,[0-9A-F]{2} )01</string>
+			<key>name</key>
+			<string>entity.name.function.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=,4,[0-9A-F]{2} )02</string>
+			<key>name</key>
+			<string>entity.name.function.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=,5,[0-9A-F]{2} )03</string>
+			<key>name</key>
+			<string>entity.name.function.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=,6,[0-9A-F]{2} )04</string>
+			<key>name</key>
+			<string>entity.name.function.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=,7,[0-9A-F]{2} )05</string>
+			<key>name</key>
+			<string>entity.name.function.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=,8,[0-9A-F]{2} )06</string>
+			<key>name</key>
+			<string>entity.name.function.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=,[3-8],[0-9A-F]{2} )[12][0-9A-F]</string>
+			<key>name</key>
+			<string>storage.type.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=^TX,6[0-9A-F]{2},[3-8],)[0-9A-F]{2}</string>
+			<key>name</key>
+			<string>storage.type.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=^RX,6F1,[3-8],)[0-9A-F]{2}</string>
+			<key>name</key>
+			<string>string.other.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=^[RT]X,6[0-9A-F]{2},)[3-8]</string>
+			<key>name</key>
+			<string>entity.name.function.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^RX,6F1</string>
+			<key>name</key>
+			<string>storage.type.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>^TX,6[0-9A-F]{2}</string>
+			<key>name</key>
+			<string>string.other.ini</string>
+		</dict>
+	</array>
+	<key>repository</key>
+	<dict>
+		<key>long</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment.line.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=^TX,7[0-9A-F]{2},8,)(2[0-9A-F])</string>
+		</dict>
+	</dict>
+	<key>scopeName</key>
+	<string>source.ini</string>
+	<key>uuid</key>
+	<string>b8ef7405-34e3-40ca-bb55-17b18f8247bd</string>
+</dict>
+</plist>

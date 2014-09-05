@@ -14,13 +14,21 @@ uuid: b8ef7405-34e3-40ca-bb55-17b18f8247bd
 patterns:
 - include: '#long'
 
-
+#常见错误
+- name: invalid.illegal.ini
+  match: (?<=[, ][0-9A-F]{2})[,.\t](?=[0-9A-F]{2})
+- name: invalid.illegal.ini
+  match: (?<= [0-9A-F]{2})\n
 #注释
 - name: comment.line.ini
   match: ;.*$
+#7F高亮提醒
+- name: keyword.control.ini
+  match: (?<=TX,6[0-9A-F]{2},5,F1 03 )7F( [0-9A-F]{2}){2}
 #中继包
 - name: comment.line.ini
   match: (?<=,[48],[0-9A-F]{2} )30 00 00( 00 00 00 00)?
+#短包包长
 #包长为1
 - name: entity.name.function.ini
   match: (?<=,[38],[0-9A-F]{2} )01
@@ -39,7 +47,7 @@ patterns:
 #包长为6
 - name: entity.name.function.ini
   match: (?<=,8,[0-9A-F]{2} )06
-#长包
+#长包包长
 - name: entity.name.function.ini
   match: (?<=,[3-8],[0-9A-F]{2} 10 )[0-9A-F]{2}
 - name: comment.line.ini
@@ -58,6 +66,7 @@ patterns:
 #回包者身份
 - name: string.other.ini
   match: ^TX,6[0-9A-F]{2}
+
 
 
 #repository:

@@ -16,9 +16,27 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>(?&lt;=[, ][0-9A-F]{2})[,.\t](?=[0-9A-F]{2})</string>
+			<key>name</key>
+			<string>invalid.illegal.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;= [0-9A-F]{2})\n</string>
+			<key>name</key>
+			<string>invalid.illegal.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>;.*$</string>
 			<key>name</key>
 			<string>comment.line.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=TX,6[0-9A-F]{2},5,F1 03 )7F( [0-9A-F]{2}){2}</string>
+			<key>name</key>
+			<string>keyword.control.ini</string>
 		</dict>
 		<dict>
 			<key>match</key>

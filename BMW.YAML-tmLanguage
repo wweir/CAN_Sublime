@@ -47,7 +47,7 @@ patterns:
 #收包者身份
 - name: storage.type.ini
   match: (?<=^TX,6[0-9A-F]{2},[3-8],)[0-9A-F]{2}
-- name: string.other.ini
+- name: keyword.control.ini
   match: (?<=^RX,6F1,[3-8],)[0-9A-F]{2}
 #包长
 - name: entity.name.function.ini

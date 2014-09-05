@@ -16,7 +16,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>;.+$</string>
+			<string>;.*$</string>
 			<key>name</key>
 			<string>comment.line.ini</string>
 		</dict>
@@ -28,31 +28,31 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=,3,[0-9A-F]{2} )01</string>
+			<string>(?&lt;=,[38],[0-9A-F]{2} )01</string>
 			<key>name</key>
 			<string>entity.name.function.ini</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=,4,[0-9A-F]{2} )02</string>
+			<string>(?&lt;=,[48],[0-9A-F]{2} )02</string>
 			<key>name</key>
 			<string>entity.name.function.ini</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=,5,[0-9A-F]{2} )03</string>
+			<string>(?&lt;=,[58],[0-9A-F]{2} )03</string>
 			<key>name</key>
 			<string>entity.name.function.ini</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=,6,[0-9A-F]{2} )04</string>
+			<string>(?&lt;=,[68],[0-9A-F]{2} )04</string>
 			<key>name</key>
 			<string>entity.name.function.ini</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=,7,[0-9A-F]{2} )05</string>
+			<string>(?&lt;=,[78],[0-9A-F]{2} )05</string>
 			<key>name</key>
 			<string>entity.name.function.ini</string>
 		</dict>
@@ -64,9 +64,15 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>(?&lt;=,[3-8],[0-9A-F]{2} 10 )[0-9A-F]{2}</string>
+			<key>name</key>
+			<string>entity.name.function.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>(?&lt;=,[3-8],[0-9A-F]{2} )[12][0-9A-F]</string>
 			<key>name</key>
-			<string>storage.type.ini</string>
+			<string>comment.line.ini</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -99,22 +105,6 @@
 			<string>string.other.ini</string>
 		</dict>
 	</array>
-	<key>repository</key>
-	<dict>
-		<key>long</key>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>comment.line.ini</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(?&lt;=^TX,7[0-9A-F]{2},8,)(2[0-9A-F])</string>
-		</dict>
-	</dict>
 	<key>scopeName</key>
 	<string>source.ini</string>
 	<key>uuid</key>

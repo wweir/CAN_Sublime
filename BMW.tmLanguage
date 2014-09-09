@@ -60,7 +60,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=,[48],[0-9A-F]{2} )30 00 00( 00 00 00 00)?</string>
+			<string>(?&lt;=,[48],[0-9A-F]{2} )30 00 ([0-9A-F]{2}) (00 00 00 00)?</string>
 			<key>name</key>
 			<string>comment.line.ini</string>
 		</dict>

@@ -36,7 +36,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=[, ][0-9A-F]{2})[,.\t](?=[0-9A-F]{2})</string>
+			<string>(?&lt;=[, ][0-9A-F]{2})[,.;\t](?=[0-9A-F]{2})</string>
 			<key>name</key>
 			<string>invalid.illegal.ini</string>
 		</dict>

@@ -12,6 +12,18 @@
 	<array>
 		<dict>
 			<key>include</key>
+			<string>#Pids21R</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#Pids21S</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#Pids21L</string>
+		</dict>
+		<dict>
+			<key>include</key>
 			<string>#Pids22R</string>
 		</dict>
 		<dict>
@@ -133,6 +145,60 @@
 	</array>
 	<key>repository</key>
 	<dict>
+		<key>Pids21L</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.ini</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.other.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=,8,F1 10 [0-9A-F]{2} )(61)( [0-9A-F]{2})</string>
+		</dict>
+		<key>Pids21R</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.ini</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.other.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=,[58],[0-9A-F]{2} 0[28] )(21)( [0-9A-F]{2})</string>
+		</dict>
+		<key>Pids21S</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.ini</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.other.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=,[678],F1 0[3456] )(61)( [0-9A-F]{2})</string>
+		</dict>
 		<key>Pids22L</key>
 		<dict>
 			<key>captures</key>

@@ -12,6 +12,18 @@
 	<array>
 		<dict>
 			<key>include</key>
+			<string>#idCANR</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#idCANT</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#idUDST</string>
+		</dict>
+		<dict>
+			<key>include</key>
 			<string>#Pids21R</string>
 		</dict>
 		<dict>
@@ -179,7 +191,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?&lt;=,[48],[0-9A-F]{2} 0[28] )(21)( [0-9A-F]{2})</string>
+			<string>(?&lt;=,8,[0-9A-F]{2} 0[26] )(21)( [0-9A-F]{2})</string>
 		</dict>
 		<key>Pids21S</key>
 		<dict>
@@ -233,7 +245,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?&lt;=,[58],[0-9A-F]{2} 0[38] )(22)(( [0-9A-F]{2}){2})</string>
+			<string>(?&lt;=,[58],[0-9A-F]{2} 0[36] )(22)(( [0-9A-F]{2}){2})</string>
 		</dict>
 		<key>Pids22S</key>
 		<dict>
@@ -252,6 +264,45 @@
 			</dict>
 			<key>match</key>
 			<string>(?&lt;=,[678],F1 0[456] )(62)(( [0-9A-F]{2}){2})</string>
+		</dict>
+		<key>idCANR</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=,[48],[0-9A-F]{2} 0[26] )(1A 80)</string>
+		</dict>
+		<key>idCANT</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=,8,[0-9A-F]{2} 10 [0-9A-F]{2} )(5A 80)</string>
+		</dict>
+		<key>idUDST</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=,8,F1 06 62 F1 50)(( [0-9A-F]{2}){3})</string>
 		</dict>
 	</dict>
 	<key>scopeName</key>

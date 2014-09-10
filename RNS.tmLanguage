@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>rns</string>
+	</array>
+	<key>name</key>
+	<string>BMW rns</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>\,[0-9A-F]{2}$</string>
+			<key>name</key>
+			<string>comment.line.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=\&gt;\,([0-9A-F]{2},){2})F1,</string>
+			<key>name</key>
+			<string>comment.line.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=\&gt;\,[0-9A-F]{2}),[0-9A-F]{2},</string>
+			<key>name</key>
+			<string>keyword.control.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=\&lt;\,[0-9A-F]{2}),F1,[0-9A-F]{2},</string>
+			<key>name</key>
+			<string>comment.line.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=[\&lt;\&gt;],8)[0-9A-F]</string>
+			<key>name</key>
+			<string>entity.name.function.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=[\&lt;\&gt;],)8</string>
+			<key>name</key>
+			<string>comment.line.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=[\&lt;\&gt;],)[0-9A-F]{2}</string>
+			<key>name</key>
+			<string>entity.name.function.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\&gt;\,</string>
+			<key>name</key>
+			<string>storage.type.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\&lt;\,</string>
+			<key>name</key>
+			<string>string.other.ini</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.rns</string>
+	<key>uuid</key>
+	<string>240349b0-da7b-4c13-ae6e-0771dfc301a6</string>
+</dict>
+</plist>

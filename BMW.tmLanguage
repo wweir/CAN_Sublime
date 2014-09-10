@@ -179,7 +179,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?&lt;=,[58],[0-9A-F]{2} 0[28] )(21)( [0-9A-F]{2})</string>
+			<string>(?&lt;=,[48],[0-9A-F]{2} 0[28] )(21)( [0-9A-F]{2})</string>
 		</dict>
 		<key>Pids21S</key>
 		<dict>
@@ -197,7 +197,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(?&lt;=,[678],F1 0[3456] )(61)( [0-9A-F]{2})</string>
+			<string>(?&lt;=,[5678],F1 0[3456] )(61)( [0-9A-F]{2})</string>
 		</dict>
 		<key>Pids22L</key>
 		<dict>

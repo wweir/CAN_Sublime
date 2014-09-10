@@ -14,7 +14,6 @@ uuid: 240349b0-da7b-4c13-ae6e-0771dfc301a6
 patterns:
 #- include: '#Pids22R'
 #- include: '#Pids22T'
-
 - name: comment.line.ini
   match: \,[0-9A-F]{2}$
 
@@ -36,7 +35,7 @@ patterns:
 - name: string.other.ini
   match: \<\,
 
-repository:
+#repository:
 #  Pids22R:
 #    match: (?<=\>\,([0-9A-F]{2},){2}F1,)22,
 ...

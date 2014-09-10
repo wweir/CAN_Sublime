@@ -65,8 +65,6 @@
 			<string>string.other.ini</string>
 		</dict>
 	</array>
-	<key>repository</key>
-	<false/>
 	<key>scopeName</key>
 	<string>source.rns</string>
 	<key>uuid</key>

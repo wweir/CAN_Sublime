@@ -11,6 +11,22 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>include</key>
+			<string>#idR</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#idT</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#Pids22R</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#Pids22T</string>
+		</dict>
+		<dict>
 			<key>match</key>
 			<string>\,[0-9A-F]{2}$</string>
 			<key>name</key>
@@ -30,7 +46,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=\&lt;\,[0-9A-F]{2}),F1,[0-9A-F]{2},</string>
+			<string>(?&lt;=\&lt;\,[0-9A-F]{2},F1,)[0-9A-F]{2},</string>
+			<key>name</key>
+			<string>keyword.control.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=\&lt;\,[0-9A-F]{2}),F1,</string>
 			<key>name</key>
 			<string>comment.line.ini</string>
 		</dict>
@@ -65,6 +87,76 @@
 			<string>string.other.ini</string>
 		</dict>
 	</array>
+	<key>repository</key>
+	<dict>
+		<key>Pids22R</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.ini</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.other.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=\&gt;\,[0-9A-F]{2},[0-9A-F]{2},F1,)(22,)([0-9A-F]{2},[0-9A-F]{2})</string>
+		</dict>
+		<key>Pids22T</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.ini</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.other.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=\&lt;\,[0-9A-F]{2},F1,[0-9A-F]{2},)(62,)(([0-9A-F]{2},){2})</string>
+		</dict>
+		<key>idR</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=\&gt;\,[0-9A-F]{2},[0-9A-F]{2},F1,)(1A,80)</string>
+		</dict>
+		<key>idT</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.ini</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=\&lt;\,[0-9A-F]{2},F1,[0-9A-F]{2},)(5A,80)((,[0-9A-F]{2}){8},)([0-9A-F]{2},[0-9A-F]{2})</string>
+		</dict>
+	</dict>
 	<key>scopeName</key>
 	<string>source.rns</string>
 	<key>uuid</key>

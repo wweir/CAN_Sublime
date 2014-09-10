@@ -7,7 +7,7 @@
 		<string>ini</string>
 	</array>
 	<key>name</key>
-	<string>BMW ini</string>
+	<string>BMW CAN/UDS</string>
 	<key>patterns</key>
 	<array>
 		<dict>

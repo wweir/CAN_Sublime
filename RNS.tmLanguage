@@ -7,7 +7,7 @@
 		<string>rns</string>
 	</array>
 	<key>name</key>
-	<string>BMW rns</string>
+	<string>RNS KWHS/KW2000</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -65,6 +65,8 @@
 			<string>string.other.ini</string>
 		</dict>
 	</array>
+	<key>repository</key>
+	<false/>
 	<key>scopeName</key>
 	<string>source.rns</string>
 	<key>uuid</key>

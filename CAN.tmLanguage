@@ -7,7 +7,7 @@
 		<string>ini</string>
 	</array>
 	<key>name</key>
-	<string>CAN ini</string>
+	<string>CAN/UDS</string>
 	<key>patterns</key>
 	<array>
 		<dict>

@@ -1,6 +1,6 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
 ---
-name: BMW ini
+name: BMW CAN/UDS
 scopeName: source.ini
 fileTypes: [ini]
 uuid: b8ef7405-34e3-40ca-bb55-17b18f8247bd

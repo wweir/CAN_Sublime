@@ -1,6 +1,6 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
 ---
-name: BMW rns
+name: RNS KWHS/KW2000
 scopeName: source.rns
 fileTypes: [rns]
 uuid: 240349b0-da7b-4c13-ae6e-0771dfc301a6
@@ -12,9 +12,11 @@ uuid: 240349b0-da7b-4c13-ae6e-0771dfc301a6
 #Invert	invalid.illegal.ini
 
 patterns:
+#- include: '#Pids22R'
+#- include: '#Pids22T'
+
 - name: comment.line.ini
   match: \,[0-9A-F]{2}$
-
 
 - name: comment.line.ini
   match: (?<=\>\,([0-9A-F]{2},){2})F1,
@@ -33,4 +35,8 @@ patterns:
   match: \>\,
 - name: string.other.ini
   match: \<\,
+
+repository:
+#  Pids22R:
+#    match: (?<=\>\,([0-9A-F]{2},){2}F1,)22,
 ...

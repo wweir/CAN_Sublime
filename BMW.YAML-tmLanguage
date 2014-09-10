@@ -36,7 +36,7 @@ patterns:
   match: (?<=TX,6[0-9A-F]{2},5,F1 03 )7F( [0-9A-F]{2}){2}
 #中继包
 - name: comment.line.ini
-  match: (?<=,[48],[0-9A-F]{2} )30 00 ([0-9A-F]{2}) (00 00 00 00)?
+  match: (?<=,[48],[0-9A-F]{2} )30 00 ([0-9A-F]{2})( 00 00 00 00)?
 #短包包长
 #包长为1
 - name: entity.name.function.ini

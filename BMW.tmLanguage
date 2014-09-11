@@ -28,7 +28,7 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#Pids21S</string>
+			<string>#Pids21T</string>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -40,11 +40,23 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#Pids22S</string>
+			<string>#Pids22T</string>
 		</dict>
 		<dict>
 			<key>include</key>
 			<string>#Pids22L</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#CodesR</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#CodesT</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#CodesL</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -66,7 +78,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;=TX,6[0-9A-F]{2},5,F1 03 )7F( [0-9A-F]{2}){2}</string>
+			<string>TX,130.+$</string>
+			<key>name</key>
+			<string>comment.line.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=TX,6[0-9A-F]{2},[58],F1 03 )7F( [0-9A-F]{2}){2}</string>
 			<key>name</key>
 			<string>keyword.control.ini</string>
 		</dict>
@@ -157,6 +175,45 @@
 	</array>
 	<key>repository</key>
 	<dict>
+		<key>CodesL</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=TX,6[0-9A-F]{2},[4-8],F1 10 [0-9A-F]{2} )(5[89] 02)</string>
+		</dict>
+		<key>CodesR</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=RX,6F1,[4-8],[0-9A-F]{2} 0[2-6] )(1[89] 02)</string>
+		</dict>
+		<key>CodesT</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.ini</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(?&lt;=TX,6[0-9A-F]{2},[4-8],F1 0[2-6] )(5[89] 0[02])</string>
+		</dict>
 		<key>Pids21L</key>
 		<dict>
 			<key>captures</key>
@@ -193,7 +250,7 @@
 			<key>match</key>
 			<string>(?&lt;=,8,[0-9A-F]{2} 0[26] )(21)( [0-9A-F]{2})</string>
 		</dict>
-		<key>Pids21S</key>
+		<key>Pids21T</key>
 		<dict>
 			<key>captures</key>
 			<dict>
@@ -247,7 +304,7 @@
 			<key>match</key>
 			<string>(?&lt;=,[58],[0-9A-F]{2} 0[36] )(22)(( [0-9A-F]{2}){2})</string>
 		</dict>
-		<key>Pids22S</key>
+		<key>Pids22T</key>
 		<dict>
 			<key>captures</key>
 			<dict>

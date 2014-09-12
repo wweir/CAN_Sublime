@@ -16,6 +16,10 @@ patterns:
 - include: '#idT'
 - include: '#Pids22R'
 - include: '#Pids22T'
+
+- name: comment.line.ini
+  match: \/\/.*?$
+
 - name: comment.line.ini
   match: \,[0-9A-F]{2}$
 

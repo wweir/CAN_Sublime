@@ -28,6 +28,12 @@
 		</dict>
 		<dict>
 			<key>match</key>
+			<string>\/\/.*?$</string>
+			<key>name</key>
+			<string>comment.line.ini</string>
+		</dict>
+		<dict>
+			<key>match</key>
 			<string>\,[0-9A-F]{2}$</string>
 			<key>name</key>
 			<string>comment.line.ini</string>

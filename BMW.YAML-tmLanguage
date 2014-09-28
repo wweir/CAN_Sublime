@@ -85,11 +85,11 @@ patterns:
 
 repository:
   idCANR:
-    match: (?<=,[48],[0-9A-F]{2} 0[26] )(1A 80)
+    match: (?<=,[48],[0-9A-F]{2} 0[26] )(1A 8\d)
     captures:
       '1': {name: storage.type.ini}
   idCANT:
-    match: (?<=,8,[0-9A-F]{2} 10 [0-9A-F]{2} )(5A 80)
+    match: (?<=,8,[0-9A-F]{2} 10 [0-9A-F]{2} )(5A 8\d)
     captures:
       '1': {name: storage.type.ini}
   idUDST:

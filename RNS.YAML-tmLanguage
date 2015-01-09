@@ -24,13 +24,13 @@ patterns:
   match: \,[0-9A-F]{2}$
 
 - name: comment.line.ini
-  match: (?<=\>\,([0-9A-F]{2},){2})F1,
+  match: (?<=\>\,([0-9A-F]{2},){2})F[17],
 - name: keyword.control.ini
   match: (?<=\>\,[0-9A-F]{2}),[0-9A-F]{2},
 - name: keyword.control.ini
-  match: (?<=\<\,[0-9A-F]{2},F1,)[0-9A-F]{2},
+  match: (?<=\<\,[0-9A-F]{2},F[17],)[0-9A-F]{2},
 - name: comment.line.ini
-  match: (?<=\<\,[0-9A-F]{2}),F1,
+  match: (?<=\<\,[0-9A-F]{2}),F[17],
 
 - name: entity.name.function.ini
   match: (?<=[\<\>],8)[0-9A-F]
@@ -45,21 +45,21 @@ patterns:
 
 repository:
   Pids22R:
-    match: (?<=\>\,[0-9A-F]{2},[0-9A-F]{2},F1,)(22,)([0-9A-F]{2},[0-9A-F]{2})
+    match: (?<=\>\,[0-9A-F]{2},[0-9A-F]{2},F[17],)(22,)([0-9A-F]{2},[0-9A-F]{2})
     captures:
       '1': {name: storage.type.ini}
       '2': {name: string.other.ini}
   Pids22T:
-    match: (?<=\<\,[0-9A-F]{2},F1,[0-9A-F]{2},)(62,)(([0-9A-F]{2},){2})
+    match: (?<=\<\,[0-9A-F]{2},F[17],[0-9A-F]{2},)(62,)(([0-9A-F]{2},){2})
     captures:
       '1': {name: storage.type.ini}
       '2': {name: string.other.ini}
   idR:
-    match: (?<=\>\,[0-9A-F]{2},[0-9A-F]{2},F1,)(1A,80)
+    match: (?<=\>\,[0-9A-F]{2},[0-9A-F]{2},F[17],)(1A,80)
     captures:
       '1': {name: storage.type.ini}
   idT:
-    match: (?<=\<\,[0-9A-F]{2},F1,[0-9A-F]{2},)(5A,80)((,[0-9A-F]{2}){8},)([0-9A-F]{2},[0-9A-F]{2})
+    match: (?<=\<\,[0-9A-F]{2},F[17],[0-9A-F]{2},)(5A,80)((,[0-9A-F]{2}){8},)([0-9A-F]{2},[0-9A-F]{2})
     captures:
       '1': {name: storage.type.ini}
       '4': {name: keyword.control.ini}
